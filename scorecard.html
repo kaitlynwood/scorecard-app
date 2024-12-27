@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorecard</title>
+    <style>
+        /* Body */
+        body {
+            background-color: yellow;
+            color: black;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: black;
+            color: yellow;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; /* Ensures table adapts to available space */
+        }
+
+        /* Table header and cells */
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        /* Table header background */
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            /* Stack the buttons vertically */
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            /* Adjust table layout on small screens */
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            th, td {
+                width: auto;
+            }
+
+            /* Adjust the font size for better readability on small screens */
+            th, td {
+                font-size: 14px;
+                padding: 6px;
+            }
+        }
+
+        /* Further adjustments for very small screens (portrait phones) */
+        @media (max-width: 480px) {
+            /* Further adjustments for small screens */
+            th, td {
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="create-scorecard-btn">Create Scorecard</button>
+    <div id="scorecard-container"></div>
+    <button id="add-player-btn" style="display:none;">Add Player</button>
+    <button id="calculate-scores-btn" style="display:none;">Calculate Scores</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
